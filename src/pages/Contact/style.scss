@@ -1,0 +1,163 @@
+
+
+
+
+.containercontact{
+    background-image: url('https://images.unsplash.com/photo-1547480577-40fa4a627a89?q=80&w=1942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    
+    background-size: cover;
+    height: 300px;
+    background-color: rgb(196, 193, 193);
+    display: flex;
+    justify-content: center;
+    line-height: 300px;
+    color: white;
+    font-size: 40px;
+}
+.container2{
+    // width: 700px;
+    margin: 100px 150px;
+    // background-color: yellow;
+    height: 500px;
+    display: flex;
+    color: #666666;
+    .left{
+        padding: 0 50px 0 0 ;
+        width: 60%;
+        // background-color: cyan;
+        .heading{
+            font-size: 20px;
+            color: #666666;
+        }
+        .location{
+            margin: 30px 0 0 0;
+            height: 65px;
+            // background-color: rebeccapurple;
+            display: flex;
+            p{
+                padding: 4px 60px;
+                font-size: 17px;
+                
+            }
+            i{
+                
+                line-height: 65px
+            }
+            
+            
+        }
+        .getintouch{
+            margin: 25px 0 0 0;
+            .heading{
+                font-size: 20px;
+            }
+        }
+        .phonemail{
+            // background-color: yellow;
+            display: flex;
+            margin: 40px 0 0 0;
+            height: 65px;
+
+            .phone{
+                // background-color: greenyellow;
+                display: flex;
+                p{
+                    padding: 4px 60px;
+                    font-size: 17px;
+                    
+                }
+                i{
+                    
+                    line-height: 65px
+                }
+            }
+            .email{
+                display: flex;
+                padding: 0 0 0 60px;
+                p{
+                    padding: 4px 60px;
+                    font-size: 17px;
+                    
+                }
+                i{
+                    
+                    line-height: 65px
+                }
+            }
+        }
+    }
+    .right{
+        width: 40%;
+        height: 100%;
+        border: 1px solid rgb(177, 177, 177);
+    }
+}
+
+.footer{
+    // background-image: url('https://images.unsplash.com/photo-1547480577-40fa4a627a89?q=80&w=1942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    
+    // background-size: cover;
+    background-color: #F2F2F2;
+    height: 260px;
+    color: #666666;
+    padding: 30px 100px;
+    .upper{
+        display: flex;
+        justify-content: space-between;
+        .epasal{
+            .head{
+                font-size: 40px;
+                color: #393939;
+
+            }
+        }
+        .newsletter{
+            padding: 15px 0 0 0;
+            font-size: 25px;
+            color: #393939;
+        }
+        .contactus{
+            .head{
+                padding: 15px 0 0 0;
+                font-size: 25px;
+                color: #393939;
+            }
+            
+        }
+        .followus{
+            .head{
+                padding: 15px 0 0 0;
+                font-size: 25px;
+                color: #393939;
+            }
+            .logos{
+                // background-color: yellow;
+                display: flex;
+                justify-content: space-between;
+                i{
+                    &:hover{
+                        background-color: rgb(252, 82, 20);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .lower{
+        margin: 25px 0 0 0 ;
+        border-top: #ababab 1px solid;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 0 0;
+        .right{
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+    }
+
+}

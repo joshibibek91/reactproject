@@ -1,0 +1,48 @@
+.navbar{
+        position: relative;
+        z-index: 2;
+    // display: flex;
+    // height: 75px;
+    // background-color: grey;
+    .container{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px;
+        
+        
+       
+        .left{
+            line-height: 70px;
+            font-size: 40px;
+            font-weight: 400;
+            color: rgb(210, 202, 202);
+            
+        }
+        .middle{
+            width: 550px;
+            // background-color: yellow;
+            display: flex;
+            justify-content: space-between;
+            
+            
+            a{
+                color: rgb(210, 202, 202);
+                text-decoration: none;
+
+            }
+
+         
+            
+            
+        }
+        .right{
+            width: 130px;
+            // background-color: red;
+            display: flex;
+            justify-content: space-between;
+            color: rgb(210, 202, 202);
+        }
+    }
+}

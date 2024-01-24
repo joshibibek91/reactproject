@@ -1,0 +1,19 @@
+
+.newslettercontainer{
+    form{
+        display: flex;
+        
+        input{
+            height: 35px;
+            font-size: 13px;
+            padding: 0 0 0 10px;
+        }
+        button{
+            height: 35px;
+            background-color: white;
+            border-color: rgb(177, 177, 177);
+            color: #666666;
+            line-height: 35px;
+        }
+    }
+}
