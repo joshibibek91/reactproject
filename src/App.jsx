@@ -2,6 +2,19 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import profileImg from './assets/profile.png';
 
+const contactInfo = [
+  { icon: 'bi-envelope-fill', label: 'Email', value: 'ashish.joshi@email.com', href: 'mailto:ashish.joshi@email.com' },
+  { icon: 'bi-telephone-fill', label: 'Phone', value: '+1 (713) 555-0192', href: 'tel:+17135550192' },
+  { icon: 'bi-geo-alt-fill', label: 'Location', value: 'Houston, Texas', href: null },
+];
+
+const socialLinks = [
+  { icon: 'bi-linkedin', href: '#', label: 'LinkedIn' },
+  { icon: 'bi-facebook', href: '#', label: 'Facebook' },
+  { icon: 'bi-twitter-x', href: '#', label: 'Twitter' },
+  { icon: 'bi-instagram', href: '#', label: 'Instagram' },
+];
+
 const services = [
   { title: 'Patient Care', color: '#2b7a78' },
   { title: 'Emergency Nursing', color: '#e74c3c' },
@@ -172,7 +185,7 @@ function App() {
       </RevealSection>
 
       {/* ===== SKILLS ===== */}
-      <RevealSection className="skills">
+      <RevealSection className="skills" id="skills">
         <p className="section-tag">Why Choose Me</p>
         <h2>My Clinical Expertise</h2>
         <div className="skills-grid">
@@ -201,6 +214,100 @@ function App() {
           ))}
         </div>
       </RevealSection>
+
+      {/* ===== CONTACT ===== */}
+      <RevealSection className="contact" id="contact">
+        <p className="section-tag">Get In Touch</p>
+        <h2>Let&apos;s Work Together</h2>
+        <div className="contact-grid">
+          <div className="contact-info">
+            <p className="contact-description">
+              Feel free to reach out for collaborations, opportunities, or just a
+              friendly conversation about healthcare and nursing.
+            </p>
+            <div className="contact-details">
+              {contactInfo.map((item) => (
+                <div className="contact-detail" key={item.label}>
+                  <span className="contact-icon">
+                    <i className={`bi ${item.icon}`} />
+                  </span>
+                  <div>
+                    <p className="contact-label">{item.label}</p>
+                    {item.href ? (
+                      <a href={item.href} className="contact-value">{item.value}</a>
+                    ) : (
+                      <p className="contact-value">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="social-links">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="social-icon"
+                  aria-label={link.label}
+                >
+                  <i className={`bi ${link.icon}`} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input type="text" id="subject" placeholder="How can I help?" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Write your message here..." />
+            </div>
+            <button type="submit" className="primary submit-btn">
+              Send Message <i className="bi bi-send-fill" />
+            </button>
+          </form>
+        </div>
+      </RevealSection>
+
+      {/* ===== FOOTER ===== */}
+      <footer className="site-footer">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <span className="brand">Ashish<span>.</span></span>
+            <p>Dedicated to compassionate care and clinical excellence in nursing.</p>
+          </div>
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#works">Gallery</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div className="footer-links">
+            <h4>Connect</h4>
+            {socialLinks.map((link) => (
+              <a key={link.label} href={link.href}>{link.label}</a>
+            ))}
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Ashish Joshi. All rights reserved.</p>
+        </div>
+      </footer>
     </main>
   );
 }
